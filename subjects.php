@@ -18,37 +18,37 @@
           <h1 style="text-align:center; padding:16px 0;">Choose Subject</h1>
              <div class="subject_wrapper">
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=1&subject=Biology">
                                          <img src="./images/biology.png" alt="biology_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=2&subject=Chemistry">
                                          <img src="./images/chemistry.png" alt="chemistry_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=3&subject=Grammar">
                                          <img src="./images/grammar.png" alt="grammer_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=4&subject=Math">
                                          <img src="./images/maths.png" alt="math_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=5&subject=Physics">
                                         <img src="./images/physics.png" alt="physics_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=6&subject=Prose">
                                         <img src="./images/prose.png" alt="prose_pic">
                           </a>
                       </div>
                       <div class="subject_1">
-                          <a href="./main.php">
+                          <a href="./main.php?id=7&subject=Poetry">
                                         <img src="./images/poetry.png" alt="poetry_pic">
                           </a>
                       </div>

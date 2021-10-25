@@ -18,6 +18,12 @@
 			$_SESSION['score']++;
 		}
 		if($number == $total_questions){
+			// $select_db = "SELECT * FROM `result` WHERE username = '$username' AND subject = '$subject'";
+			// $select_q = $connection->query($select_db);
+			// if($select_q){
+			// 	$insert_db = "INSERT INTO `result`(`username`, `subject`) VALUES ('{$username}','{$subject}')";
+			// 	$insert_q = $connection->query($insert_db);
+			// }
 			header("LOCATION: final.php");
 		}else{
 			header("LOCATION: question.php?n=". $next);

@@ -4,9 +4,9 @@
 	if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true){
 		Header("Location: login.php");
     }
-    if ($_SESSION['testcomplete'] == 'yes') {
-         header("Location: login.php");
-    }
+    // if ($_SESSION['testcomplete'] == 'yes') {
+    //      header("Location: login.php");
+    // }
 	// $number = $_GET['n'];
 	// $quizid = base64_decode($_GET['quizid']);
 	
@@ -40,7 +40,7 @@
 						<div class="title">EduAid Test App</div>
 						<div class="timer">
 							<div class="time_left_txt">Time Left</div>
-							<div class="timer_sec">60s</div>
+							<div class="timer_sec">15</div>
 						</div>
 						<div class="time_line"></div>
                 </header>
@@ -50,8 +50,8 @@
 						<form method="POST" action="process.php">
 							<ul class="choicess">
 								<?php while($row=mysqli_fetch_assoc($choices)){ ?>
-								<li>
-									<input type="radio" name="choice" value="<?php echo $row['answer_id']; ?>">  <?php echo $row['answers']; ?>
+								<li style="cursor:pointer; height:42px; width:100%; border:1px solid rgb(116, 164, 235); background-color:rgb(232, 241, 255); padding-top:9px; padding-left:9px; border-radius:4px;">
+									<input style="padding-left:5px;" id="chb" type="radio" name="choice" value="<?php echo $row['answer_id']; ?>">  <?php echo $row['answers']; ?>
 								</li><br>
 								<?php } ?>
 							</ul>

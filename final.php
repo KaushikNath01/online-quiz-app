@@ -3,7 +3,7 @@
 	if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true){
 		Header("Location: login.php");
 	}
-	$_SESSION['testcomplete'] = 'yes';
+	// $_SESSION['testcomplete'] = 'yes';
 ?>
 <html>
 <head>

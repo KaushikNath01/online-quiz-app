@@ -17,8 +17,8 @@
 	 Hello <?php echo $_SESSION['username'] ?>
      <main class="quiz_box index_container">
 			<div class = "menu">
-					<a href="subjects.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:#f15b5b; color:white;  font-size:19px;" class="take_quiz">Take Quiz</button></a><br><br>
-					<a href="add.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:#f15b5b; color:white;  font-size:19px;" class="add_ques">Add questions</button></a>
+					<a href="subjects.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:rgb(77, 93, 235); color:white;  font-size:19px;" class="take_quiz">Take Quiz</button></a><br><br>
+					<a href="add.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:rgb(77, 93, 235); color:white;  font-size:19px;" class="add_ques">Add questions</button></a>
 			</div>
 	</main>
 </body>
