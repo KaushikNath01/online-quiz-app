@@ -1,7 +1,7 @@
 <?php  include 'db.php';
 session_start();
-if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true){
-	Header("Location: login.php");
+if(!isset($_SESSION['adminloggedIn']) || $_SESSION['adminloggedIn'] != true){
+	Header("Location: adminlogin.php");
 }
 if(isset($_POST['submit'])){
 	$question_number = $_POST['question_number'];
@@ -17,9 +17,9 @@ if(isset($_POST['submit'])){
 
 
 	$query = "INSERT INTO question_table (";
-	$query .= "question_number, question_text )";
+	$query .= "question_number, quiz_id ,question_text )";
 	$query .= "VALUES (";
-	$query .= " '{$question_number}','{$question_text}' ";
+	$query .= " '{$question_number}','{$subjects}','{$question_text}' ";
 	$query .= ")";
 
 	$result = mysqli_query($connection,$query);
@@ -78,7 +78,6 @@ if(isset($_POST['submit'])){
 					echo "<h4>" . $message . "</h4>";
 				} ?>
 				<form method="POST" action="add.php">
-						<p>
 							<label>Question No:</label>
 							<input type="number" name="question_number" value="<?php echo $next;  ?>">
 						</p><br>

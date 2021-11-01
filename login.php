@@ -32,7 +32,9 @@
                     $login = true;
                     $_SESSION['loggedIn'] = true;
                     $_SESSION['username'] = $username;
-                    header('Location: options.php');
+                    $query = "UPDATE user SET active_user = '1' WHERE name = '$username'";
+                    $connectQ = $connection->query($query); 
+                    header('Location: options.php');                       
                 }else{
                     echo 'invalid crediantials';
                 }

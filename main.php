@@ -17,6 +17,21 @@
 	<?php include './links.php';
 	       $subject = $_GET['subject'];
 	?>
+	<?php include './links.php';
+	       $subject = $_GET['subject'];
+	       $username = $_SESSION['username'];
+	       $check_exist = $connection->query("SELECT username,subject FROM `result` WHERE username = '$username' AND subject = '$subject'");
+		   if(mysqli_num_rows($check_exist) > 0){
+			?>
+					<script>
+							alert("Test is already completed");
+					</script>
+	        <?php
+			   header("Location:subjects.php");
+			   
+			//    session_destroy();
+		   }
+	?>
 </head>
 <body?>
 	<main class="quiz_box main_container" style="width:600px; height:400px; background-color:white;">
@@ -33,7 +48,7 @@
 					<li><strong>Estimated Time:</strong> <?php echo $total_questions*1; ?> min</li>
 				</ul><br>
 				<div class="main_btn">
-				       <a href="question.php?n=1" class="start">Start Quiz</a>
+				       <a href="question.php?n=1" class="start" name="start">Start Quiz</a>
 				</div>
 			</div>
 	</main>

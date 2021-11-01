@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: rgba(212, 195, 187, 0.308);
+  background-color: white;
   list-style: none;
 }
 
@@ -195,7 +195,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 1px solid lightgrey;
-  background-color: rgba(28, 11, 180, 0.692);
+  background-color: #5151bd;
 }
 
 footer .submit_btn {
@@ -205,8 +205,8 @@ footer .submit_btn {
   border-radius: 6px;
   background: transparent;
   border: none;
-  background-color: #ffffff;
-  color: rgb(88, 88, 88);
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -234,7 +234,7 @@ footer .submit_btn {
 .main_container .main_wrapper .main_btn a {
   height: 44px;
   width: 130px;
-  background-color: rgb(77, 93, 235);
+  background-color: #007bff;
   border-radius: 6px;
   padding-left: 27px;
   padding-top: 10px;
@@ -260,7 +260,7 @@ footer .submit_btn {
 
 .index_container .menu a {
   font-size: 22px;
-  background-color: rgb(77, 93, 235);
+  background-color: #007bff;
   color: white;
 }
 
@@ -288,7 +288,7 @@ footer .submit_btn {
 }
 
 .add_container .add_quiz_btn input {
-  background-color: rgb(77, 93, 235);
+  background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
@@ -347,7 +347,7 @@ footer .submit_btn {
 }
 
 .login_page .login_btn, .create_acc .login_btn {
-  background-color: rgb(77, 93, 235);
+  background-color: #007bff;
   border: none;
   outline: none;
   color: white;
@@ -359,7 +359,7 @@ footer .submit_btn {
   width: 300px;
   height: 44px;
   font-size: 16px;
-  background-color: rgb(77, 93, 235);
+  background-color: #007bff;
   border: none;
   outline: none;
   color: white;
@@ -387,5 +387,9 @@ footer .submit_btn {
   height: 300px;
   width: 270px;
   cursor: pointer;
+}
+.test_taken_disable{
+  opacity: .5;
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */

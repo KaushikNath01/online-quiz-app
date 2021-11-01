@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 body{
-    background-color: #9fd1c3;
+    background-color: white;
     list-style: none;
 }
 ::selection{
@@ -145,7 +145,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid lightgrey;
-    background-color: rgb(245, 245, 153);
+    background-color: rgb(81, 81, 189);
     .submit_btn{
         height:44px;
         width:120px;
@@ -153,8 +153,8 @@ footer{
         border-radius: 6px;
         background:transparent;
         border: none;
-        background-color: #f15b5b;
-        color: white;
+        background-color: white;
+        color: black;
         cursor: pointer;
     }
 }
@@ -171,7 +171,7 @@ footer{
             a{
                 height: 44px;
                 width:130px;
-                background-color: #f15b5b;
+                background-color: #007bff;
                 border-radius:6px;
                 padding-left:27px;
                 padding-top:10px;
@@ -192,7 +192,7 @@ footer{
     .menu{
         a{
             font-size: 22px;
-            background-color:#f15b5b;
+            background-color:#007bff;
             color: white;
         }
     }
@@ -209,7 +209,7 @@ footer{
         justify-content: center;
         padding: 40px 0 0 0;
         input{
-            background-color:#f15b5b;
+            background-color:#007bff;
             color: white;
             border: none;
             cursor: pointer;
@@ -252,7 +252,7 @@ footer{
         font-family: poppins;
     }
     .login_btn{
-        background-color: #f15b5b;
+        background-color: #007bff;
         border: none;
         outline: none;
         color: white;
@@ -264,7 +264,7 @@ footer{
     width: 300px;
     height:44px;
     font-size: 16px;
-    background-color: #f15b5b;
+    background-color: #007bff;
     border: none;
     outline: none;
     color: white;

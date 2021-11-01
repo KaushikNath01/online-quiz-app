@@ -4,9 +4,9 @@
 	if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true){
 		Header("Location: login.php");
     }
-    // if ($_SESSION['testcomplete'] == 'yes') {
-    //      header("Location: login.php");
-    // }
+	// if ($_SESSION['testcomplete'] == 'yes') {
+	// 	header("Location: login.php");
+	// }
 	// $number = $_GET['n'];
 	// $quizid = base64_decode($_GET['quizid']);
 	
@@ -31,7 +31,7 @@
 <html>
 <head>
 	<title>PHP Quizer</title>
-	<?php include './links.php'; ?>
+	<?php include './links.php';?>
 </head>
 <body>
 	<main>
@@ -40,7 +40,9 @@
 						<div class="title">EduAid Test App</div>
 						<div class="timer">
 							<div class="time_left_txt">Time Left</div>
-							<div class="timer_sec">15</div>
+							<div class="timer_sec">
+								   <div id="seconds"></div>  
+							</div>
 						</div>
 						<div class="time_line"></div>
                 </header>
