@@ -37,7 +37,7 @@
                 </header>
 				<section>
 						<div class="current">Question <?php echo $number; ?> of <?php echo $total_questions; ?> </div><br>
-						<p class="que_text"><?php echo $question['question_text']; ?> </p><br>
+						<p class="que_text"><?php echo $question['question_text'];?></p><br>
 						<form method="POST" action="process.php?id=<?php echo $question_selected?>&subject=<?php echo base64_encode($get_subject);?>">
 									<ul class="choicess">
 										<?php while($row=mysqli_fetch_assoc($choices)){ ?>

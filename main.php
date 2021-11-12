@@ -15,7 +15,7 @@
 		   $query = "SELECT * FROM question_table WHERE quiz_id = $subject_selected";
 	       $total_questions = mysqli_num_rows(mysqli_query($connection,$query));
 	?>
-	<?php include './links.php';
+	<?php 
 	       $subject = base64_decode($_GET['subject']);
 	       $username = $_SESSION['username'];
 	       $check_exist = $connection->query("SELECT username,subject FROM `result` WHERE username = '$username' AND subject = '$subject'");
