@@ -17,12 +17,9 @@
                 margin: 0; 
                 padding:0;
            }
-            th{
-                border-top:none;
-                border-bottom:1px solid grey;
-                border-left:1px solid grey;
-                border-right:none;
-            }
+           th{
+                border-bottom:.5px solid lightgray;
+            } 
     </style>
 </head>
 <body>
@@ -31,18 +28,24 @@
                $query = $connection->query($get_users);
                $num_rows = mysqli_num_rows($query);
 ?>
-       <div class=" quiz_box user_table" style=" height:100vh; display: grid; place-item:center; width:100%;">
-                <h1 style="text-align:center; padding:10px 0; heigth:10vh;">User Ranking</h1>
-                <div class="user_wrapper" style="width:80%; margin:auto;height:90vh; display:grid;place-item:center;background-color:#EEEEEE;">
-                       <table>
+<script>
+                   $(document).ready( function () {
+                        $('#myTable').DataTable();
+                   } );
+</script>
+       <div class="user_table" style="width:90%;margin:auto;">
+                <h1 style="text-align:center; padding:10px 0;">User Ranking</h1>
+                <div class="user_wrapper">
+                       <table id="myTable" style="background-color:#EDEDED">
                                <thead>
                                        <tr>
                                              <th>Result Id</th>
                                              <th>Quiz Id</th>
                                              <th>Username</th>
                                              <th>Subject</th>
+                                             <th>Total ques</th>
                                              <th>Score</th>
-                                             <th style="border-right:1px solid grey;">is submit</th>
+                                             <th>is submit</th>
                                        </tr>
                                </thead>
                                <tbody>
@@ -54,8 +57,9 @@
                                              <th><?php echo $num_array['quiz_id'] ?></th>
                                              <th><?php echo $num_array['username'] ?></th>
                                              <th><?php echo $num_array['subject'] ?></th>
+                                             <th><?php echo $num_array['total_questions'] ?></th>
                                              <th><?php echo $num_array['score'] ?></th>
-                                             <th style="border-right:1px solid grey;"><?php echo $num_array['is_submit'] ?></th>
+                                             <th><?php echo $num_array['is_submit'] ?></th>
                                         </tr>
                                         <?php
                                           }

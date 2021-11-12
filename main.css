@@ -207,9 +207,15 @@ footer .submit_btn {
   border: none;
   background-color: white;
   color: black;
-  cursor: pointer;
 }
-
+.disable{
+  pointer-events: none;
+  opacity: .7;
+}
+.disable_btn{
+  display: none;
+  pointer-events: none;
+}
 .main_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,9 +393,5 @@ footer .submit_btn {
   height: 300px;
   width: 270px;
   cursor: pointer;
-}
-.test_taken_disable{
-  opacity: .5;
-  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */

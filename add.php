@@ -1,5 +1,5 @@
 <?php  include 'db.php';
-session_start();
+     session_start();
 if(!isset($_SESSION['adminloggedIn']) || $_SESSION['adminloggedIn'] != true){
 	Header("Location: adminlogin.php");
 }
@@ -7,7 +7,8 @@ if(isset($_POST['submit'])){
 	$question_number = $_POST['question_number'];
 	$question_text = $_POST['question_text'];
 	$correct_choice = $_POST['correct_choice'];
-
+	// $subject_selected = $_POST['subject'];
+     
 	$choice = array();
 	$choice[1] = $_POST['choice1'];
 	$choice[2] = $_POST['choice2'];
@@ -17,9 +18,9 @@ if(isset($_POST['submit'])){
 
 
 	$query = "INSERT INTO question_table (";
-	$query .= "question_number, quiz_id ,question_text )";
+	$query .= "question_number,question_text )";
 	$query .= "VALUES (";
-	$query .= " '{$question_number}','{$subjects}','{$question_text}' ";
+	$query .= " '{$question_number}','{$question_text}' ";
 	$query .= ")";
 
 	$result = mysqli_query($connection,$query);
@@ -81,6 +82,17 @@ if(isset($_POST['submit'])){
 							<label>Question No:</label>
 							<input type="number" name="question_number" value="<?php echo $next;  ?>">
 						</p><br>
+						<!-- <p>
+							<label>Subject:</label>
+							<select style="width:172px;text-align:center;" name="subject_name" id="">
+								       <option value="">--Select--</option>
+								       <option value="1" name="subject">Chemistry</option>
+								       <option value="2" name="subject">Math</option>
+								       <option value="3" name="subject">Biology</option>
+								       <option value="4" name="subject">Physics</option>
+								       <option value="5" name="subject">English</option>
+							</select>
+						</p><br> -->
 						<p>
 							<label>Question Text:</label>
 							<input type="text" name="question_text">

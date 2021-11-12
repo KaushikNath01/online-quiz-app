@@ -14,9 +14,10 @@
 	<?php include './links.php'; ?>
 </head>
 <body>
-	 Hello <?php echo $_SESSION['username'] ?>
-     <main class="quiz_box index_container">
-			<div class = "menu">
+	 <?php include 'logoutBtn.php'; ?>
+     <main class="quiz_box index_container" style="display:flex; flex-direction:column;justify-content:center; align-item:center">
+		    <h2>Hello <span style="color:blue;"><?php echo $_SESSION['username'] ?></span></h2>
+			<div class = "menu" style="padding-top:30px;">
 					<a href="subjects.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:rgb(77, 93, 235); color:white;  font-size:19px;" class="take_quiz">Take Quiz</button></a><br><br>
 					<!-- <a href="add.php" class="Qbutton"><button style="background:transparent; outline:none; border:none; cursor:pointer; width:240px;height:50px; background-color:rgb(77, 93, 235); color:white;  font-size:19px;" class="add_ques">Add questions</button></a> -->
 			</div>

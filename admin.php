@@ -85,7 +85,7 @@
        <header class="header-top" style="height:10vh;width:100%;background-color:#2978B5; color:white;">
                  <nav style="width:80%;margin:auto;">
                         <ul>
-                              <a href="">
+                              <a href="#">
                                    <li class="dash">Dashboard</li>
                               </a>
                               <a href="users.php">
