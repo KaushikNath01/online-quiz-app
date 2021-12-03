@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <?php include './links.php'?>
 </head>
 <body>
-     <section class="quiz_box create_acc">
-              <div class="create_account">
+     <section class="quiz_box create_acc" style="display:flex;flex-direction:column;">
+              <div class="create_account" style="padding-bottom:15px;">
                     <div class="login-triangle"></div>
                     <h2 class="login-header">Sign Up</h2><br>
                         <form class="login-container" method="POST">
@@ -19,6 +19,9 @@
                             <p><button class="signUp_btn" type="submit" name="submit" value="Sign Up">Sign Up</button></p>
                         </form>
                     </div>
+              </div>
+              <div class="if_loggedin">
+                     <a href="./login.php" style="color:blue;">If Already Signed In?</a>
               </div>  
      </section>
      <?php include './db.php';

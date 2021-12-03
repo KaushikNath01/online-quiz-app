@@ -272,7 +272,7 @@ footer .submit_btn {
 
 .add_container {
   background-color: white;
-  height: 580px;
+  height: 650px;
   width: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,7 +280,7 @@ footer .submit_btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px 0 40px 0;
+  padding: 30px 0 60px 0;
 }
 
 .add_container .add_quiz_btn {
@@ -394,4 +394,13 @@ footer .submit_btn {
   width: 270px;
   cursor: pointer;
 }
+.blink-hard {
+  animation: blinker 1s step-end infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

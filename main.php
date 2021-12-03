@@ -10,6 +10,7 @@
 	<title>EduAid Quiz App</title>
 	<?php include './links.php';
 	       $subject = $_GET['subject'];
+		   print_r(base64_decode($subject));
 		   $subject_selected = $_GET['id'];
 	       echo $subject_selected;
 		   $query = "SELECT * FROM question_table WHERE quiz_id = $subject_selected";
@@ -21,7 +22,6 @@
 	       $check_exist = $connection->query("SELECT username,subject FROM `result` WHERE username = '$username' AND subject = '$subject'");
 		   if(mysqli_num_rows($check_exist) > 0){
 			   header("Location:subjects.php");
-			//    session_destroy();
 		   }
 	?>
 </head>
@@ -37,11 +37,11 @@
 					<li><strong>Applicant:  </strong><?php echo $_SESSION['username'] ?></li>
 					<li><strong>Subject:  </strong><?php echo $subject; ?></li>
 					<li><strong>No of Questions: </strong><?php echo $total_questions; ?></li>
-					<li><strong>Type:</strong> Multiple Choice</li>
+					<li><strong>Type: </strong> Multiple Choice</li>
 					<li><strong>Estimated Time:</strong> <?php echo $total_questions*1; ?> min</li>
 				</ul><br>
 				<div class="main_btn">               
-				       <a href="question.php?n=1&id=<?php echo $subject_selected;?>&subject=<?php echo base64_encode($subject);?>" class="startTimer" name="start">Start Quiz</a>
+				       <a href="question.php?n=1&id=<?php echo $subject_selected;?>&subject=<?php echo base64_encode($subject);?>&totalq=<?php echo base64_encode($total_questions);?>" class="startTimer" name="start">Start Quiz</a>
 				</div>
 			</div>
 	</main>

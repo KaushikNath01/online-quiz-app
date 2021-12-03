@@ -40,7 +40,6 @@
                                <thead>
                                        <tr>
                                              <th>Result Id</th>
-                                             <th>Quiz Id</th>
                                              <th>Username</th>
                                              <th>Subject</th>
                                              <th>Total ques</th>
@@ -54,7 +53,6 @@
                                         ?>
                                         <tr>
                                              <th><?php echo $num_array['result_id'] ?></th>
-                                             <th><?php echo $num_array['quiz_id'] ?></th>
                                              <th><?php echo $num_array['username'] ?></th>
                                              <th><?php echo $num_array['subject'] ?></th>
                                              <th><?php echo $num_array['total_questions'] ?></th>
